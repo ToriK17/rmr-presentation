@@ -1,73 +1,46 @@
-# React + TypeScript + Vite
+# Rocky Mountain Ruby 2025 Deck (React + TypeScript + Vite)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A web-based presentation built with React, TypeScript, Vite, and Tailwind CSS.
+This deck summarizes major takeaways from the Rocky Mountain Ruby 2025 Conference—including talks on AI, mentorship, operational confidence, and the evolving Ruby ecosystem.
 
-Currently, two official plugins are available:
+It’s designed to run entirely in the browser: you can click through slides locally or host them as a small web app.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🧭 Purpose
+- Create a click-through “conference recap” deck you can present or share.
+- Keep everything self-contained (no slide software needed).
+- Showcase takeaways from multiple talks: We Who Remember Magic, Learning Empathy from Pokémon Blue, Operating Rails, Learning How to Learn, and more.
 
-## React Compiler
+## 🛠 Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+| Area               | Tool / Library                                               | Notes                                   |
+| ------------------ | ------------------------------------------------------------ | --------------------------------------- |
+| Framework          | **Vite + React + TypeScript**                                | Fast local dev with HMR                 |
+| Styling            | **Tailwind CSS**                                             | Simple responsive design                |
+| Icons              | **lucide-react**                                             | Lightweight icon set for arrows, etc.   |
+| Presentation logic | Custom React component (`RockyMountainRubyPresentation.tsx`) | Handles slides + navigation             |
+| Build              | `npm run build`                                              | Outputs to `/dist` for hosting anywhere |
 
-## Expanding the ESLint configuration
+## 🚀 Local Development
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+# 1. Clone the repo
+git clone https://github.com/<your-user>/rocky-mountain-ruby.git
+cd rocky-mountain-ruby
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+# 2. Install dependencies
+npm install
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+# 3. Run locally
+npm run dev
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Open `http://localhost:5173` and click through the slides. Use the on-screen arrows or keyboard navigation.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🧠 Development Notes
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- Tailwind classes are configured in tailwind.config.js.
+- Global styles live in src/index.css (@tailwind base; @tailwind components; @tailwind utilities;).
+- Add new slides by appending to the slides array inside RockyMountainRubyPresentation.tsx.
+- The deck cycles with stateful navigation (nextSlide, prevSlide).
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## License
+
+MIT. You break it, you buy it. Just kidding. But also not really. . .
