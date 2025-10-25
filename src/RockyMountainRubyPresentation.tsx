@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
-const Slide = ({ children, className = "" }) => (
+type SlideProps = {
+  children: React.ReactNode;
+  className?: string;
+};
+
+const Slide = ({ children, className = "" }: SlideProps) => (
   <div className={`w-full h-full flex flex-col justify-center items-center p-12 ${className}`}>
     {children}
   </div>
