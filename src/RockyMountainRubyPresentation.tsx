@@ -89,6 +89,58 @@ const RockyMountainRubyContext = () => {
       </div>
     </Slide>,
 
+    // The Hallway Track
+    <Slide key="hallway-track" className="bg-gradient-to-br from-teal-50 to-cyan-50">
+      <h2 className="text-4xl font-bold mb-10 text-gray-800">The Hallway Track</h2>
+      <div className="max-w-5xl space-y-8">
+        <p className="text-2xl text-gray-600 text-center italic mb-12">
+          "The real conference happens between sessions"
+        </p>
+
+        <div className="grid grid-cols-2 gap-8">
+          <div className="bg-white p-8 rounded-lg shadow-lg">
+            <h3 className="text-2xl font-bold mb-6 text-teal-900">🏗️ Community Builders</h3>
+            <div className="space-y-4 text-lg text-gray-700">
+              <div>
+                <p className="font-semibold text-teal-800">Bekki Freeman</p>
+                <p className="text-sm opacity-80">Women's group organizer</p>
+              </div>
+              <div>
+                <p className="font-semibold text-teal-800">Spike Ilacqua</p>
+                <p className="text-sm opacity-80">Boulder community groups</p>
+              </div>
+              <div>
+                <p className="font-semibold text-teal-800">André Arko</p>
+                <p className="text-sm opacity-80">Ruby community central figure</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-white p-8 rounded-lg shadow-lg">
+            <h3 className="text-2xl font-bold mb-6 text-cyan-900">👥 The Full Spectrum</h3>
+            <ul className="text-lg space-y-4 text-gray-700">
+              <li className="flex items-center">
+                <span className="text-cyan-600 mr-3">🎯</span>
+                Experienced Rubyists sharing wisdom
+              </li>
+              <li className="flex items-center">
+                <span className="text-cyan-600 mr-3">📚</span>
+                Ruby teachers and educators
+              </li>
+              <li className="flex items-center">
+                <span className="text-cyan-600 mr-3">🚀</span>
+                Bootcamp grads seeking first teams
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="text-center text-xl text-gray-600 bg-white/50 p-6 rounded-lg">
+          From community organizers to career-changers, all united by Ruby
+        </div>
+      </div>
+    </Slide>,
+
     // What Matters Most
     <Slide key="what-matters" className="bg-white">
       <h2 className="text-4xl font-bold mb-10 text-gray-800">What Matters Most</h2>
