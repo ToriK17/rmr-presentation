@@ -167,10 +167,9 @@ const RockyMountainRubyContext = () => {
     // Transition to Game
     <Slide key="transition" className="bg-gradient-to-br from-yellow-500 to-orange-600 text-white">
       <h2 className="text-5xl font-bold mb-8">Now Let's Have Some Fun</h2>
-      <p className="text-3xl mb-12">How well do you know what was said at Rocky Mountain Ruby?</p>
+      <p className="text-3xl mb-12">How well can you guess what was said at Rocky Mountain Ruby?</p>
       <div className="text-2xl space-y-4 max-w-3xl">
-        <p>✨ Round 1: Real or Fake Quotes?</p>
-        <p>🎯 Round 2: Match the Talk</p>
+        <p>✨ Game Time: Real or Fake Quotes?</p>
       </div>
       <p className="text-xl mt-12 opacity-90">Get ready to use the chat and polls!</p>
     </Slide>,
